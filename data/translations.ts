@@ -3,6 +3,7 @@ export type Language = "pt" | "en";
 export const translations = {
   pt: {
     nav: {
+      portfolio: "Portfólio",
       home: "Início",
       projects: "Projetos",
       about: "Sobre",
@@ -59,6 +60,7 @@ export const translations = {
   },
   en: {
     nav: {
+      portfolio: "Portfolio",
       home: "Home",
       projects: "Projects",
       about: "About",

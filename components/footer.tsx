@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="border-t border-border bg-bg">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-8 sm:flex-row sm:justify-between">
         <p className="text-sm text-text-secondary">
-          &copy; {new Date().getFullYear()} Luiz Oliveira • Portfolio. {t.footer.rights}
+          &copy; {new Date().getFullYear()} Luiz Oliveira • {t.nav.portfolio}. {t.footer.rights}
         </p>
         <div className="flex gap-4">
           <a

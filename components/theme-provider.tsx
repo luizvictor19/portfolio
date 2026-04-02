@@ -17,13 +17,14 @@ export function useTheme() {
   return ctx;
 }
 
-function getInitialTheme(): Theme {
-  if (typeof document === "undefined") return "light";
-  return (document.documentElement.getAttribute("data-theme") as Theme) ?? "light";
-}
-
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+export function ThemeProvider({
+  children,
+  initialTheme = "dark",
+}: {
+  children: React.ReactNode;
+  initialTheme?: Theme;
+}) {
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
   function toggleTheme() {
     const next = theme === "light" ? "dark" : "light";

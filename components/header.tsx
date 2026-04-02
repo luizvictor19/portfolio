@@ -28,7 +28,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <Link href="/" className="text-lg font-bold text-text">
-          Portfolio
+          {t.nav.portfolio}
         </Link>
 
         {/* Desktop nav */}

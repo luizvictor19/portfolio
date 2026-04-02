@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/components/language-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import AnimatedBackground from "@/components/animated-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +48,8 @@ export default async function RootLayout({
     >
       <body className="flex min-h-screen flex-col font-sans antialiased">
         <LanguageProvider>
-          <ThemeProvider>
+          <ThemeProvider initialTheme={theme}>
+            <AnimatedBackground />
             <Header />
             <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
               {children}

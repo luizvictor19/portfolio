@@ -41,3 +41,100 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
+
+/* Animated background blobs */
+.blob-container {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  filter: blur(72px);
+  will-change: transform, translate;
+  background: var(--color-primary);
+}
+
+[data-theme="light"] .blob {
+  opacity: 0.30;
+}
+
+[data-theme="dark"] .blob {
+  opacity: 0.20;
+}
+
+.blob-1 {
+  width: 580px;
+  height: 580px;
+  top: -120px;
+  left: -180px;
+  animation: blob-float-1 12s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 480px;
+  height: 480px;
+  top: 35%;
+  right: -140px;
+  background: var(--color-primary-hover);
+  animation: blob-float-2 15s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  width: 380px;
+  height: 380px;
+  bottom: 8%;
+  left: 22%;
+  animation: blob-float-3 18s ease-in-out infinite;
+  animation-delay: -9s;
+}
+
+@keyframes blob-float-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  33% {
+    transform: translate(80px, -100px) scale(1.10);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  66% {
+    transform: translate(-60px, 60px) scale(0.90);
+    border-radius: 50% 40% 60% 30% / 40% 70% 30% 60%;
+  }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  33% {
+    transform: translate(-90px, 70px) scale(1.12);
+    border-radius: 60% 40% 30% 70% / 40% 60% 40% 60%;
+  }
+  66% {
+    transform: translate(50px, -80px) scale(0.88);
+    border-radius: 30% 60% 40% 60% / 60% 40% 60% 30%;
+  }
+}
+
+@keyframes blob-float-3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+  }
+  33% {
+    transform: translate(70px, 90px) scale(1.08);
+    border-radius: 60% 30% 60% 40% / 50% 40% 60% 50%;
+  }
+  66% {
+    transform: translate(-80px, -50px) scale(0.92);
+    border-radius: 40% 60% 50% 40% / 60% 50% 40% 60%;
+  }
+}
