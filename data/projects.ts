@@ -27,7 +27,7 @@ export const projects: Project[] = [
     },
     techStack: ["HTML", "CSS", "Javascript"],
     image: "/images/lig-4.png",
-    link: "https://github.com/example/ecommerce",
+    link: "https://lig-4-dusky.vercel.app/",
   },
   {
     id: "2",
