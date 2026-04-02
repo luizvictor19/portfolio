@@ -22,16 +22,20 @@ export async function generateMetadata(): Promise<Metadata> {
   const cookieStore = await cookies();
   const lang = cookieStore.get("language")?.value ?? "pt";
   const siteName = lang === "en" ? "Portfolio" : "Portfólio";
+  const description =
+    lang === "en"
+      ? "Personal portfolio showcasing my projects and skills."
+      : "Portfólio pessoal com meus projetos e habilidades.";
 
   return {
     title: {
       default: siteName,
       template: `%s | ${siteName}`,
     },
-    description: "Personal portfolio showcasing my projects and skills.",
+    description,
     openGraph: {
       title: siteName,
-      description: "Personal portfolio showcasing my projects and skills.",
+      description,
       type: "website",
       images: ["/og-default.png"],
     },
