@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Theme variables */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-text: #111827;
+  --color-text-secondary: #6b7280;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-border: #e5e7eb;
+  --color-card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #171717;
+  --color-text: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-border: #27272a;
+  --color-card-bg: #18181b;
+}
+
+/* Map to Tailwind theme */
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-border: var(--color-border);
+  --color-card-bg: var(--color-card-bg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
