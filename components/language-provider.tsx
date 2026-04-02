@@ -29,6 +29,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const next: Language = language === "pt" ? "en" : "pt";
     setLanguage(next);
     localStorage.setItem("language", next);
+    document.cookie = `language=${next};path=/;max-age=31536000`;
   }
 
   return (

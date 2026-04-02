@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getProjects } from "@/data/projects";
 import ProjectDetailContent from "@/components/project-detail-content";
@@ -18,12 +19,18 @@ export async function generateMetadata({
   const project = getProjectBySlug(slug);
   if (!project) return {};
 
+  const cookieStore = await cookies();
+  const lang = cookieStore.get("language")?.value ?? "pt";
+  const siteName = lang === "en" ? "Portfolio" : "Portfólio";
+  const title = lang === "en" ? project.title.en : project.title.pt;
+  const description = lang === "en" ? project.description.en : project.description.pt;
+
   return {
-    title: project.title.pt,
-    description: project.description.pt,
+    title,
+    description,
     openGraph: {
-      title: `${project.title.pt} | Portfolio`,
-      description: project.description.pt,
+      title: `${title} | ${siteName}`,
+      description,
       images: [project.image],
     },
   };

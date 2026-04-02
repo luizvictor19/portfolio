@@ -18,19 +18,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Portfolio",
-    template: "%s | Portfolio",
-  },
-  description: "Personal portfolio showcasing my projects and skills.",
-  openGraph: {
-    title: "Portfolio",
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const lang = cookieStore.get("language")?.value ?? "pt";
+  const siteName = lang === "en" ? "Portfolio" : "Portfólio";
+
+  return {
+    title: {
+      default: siteName,
+      template: `%s | ${siteName}`,
+    },
     description: "Personal portfolio showcasing my projects and skills.",
-    type: "website",
-    images: ["/og-default.png"],
-  },
-};
+    openGraph: {
+      title: siteName,
+      description: "Personal portfolio showcasing my projects and skills.",
+      type: "website",
+      images: ["/og-default.png"],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
