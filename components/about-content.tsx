@@ -4,18 +4,32 @@ import SectionTitle from "./section-title";
 import { useLanguage } from "./language-provider";
 
 const skills = [
+  "HTML5",
+  "CSS3",
   "TypeScript",
   "JavaScript",
   "React",
+  "RESTful API",
+  "Context API",
+  "Redux Toolkit",
   "Next.js",
-  "Node.js",
   "Tailwind CSS",
-  "PostgreSQL",
-  "MongoDB",
+  "Material-UI",
+  "Styled Components",
+  "Node.js",
+  "Express.js",
+  "Figma - UI/UX Design", 
   "Git",
   "Docker",
-  "REST APIs",
-  "GraphQL",
+  "English",
+  "TDD/BDD",
+  "Vitest",
+  "React Testing Library",
+  "Jest",
+  "Cypress",
+  "Flutter",
+  "Dart",
+  "Python",
 ];
 
 export default function AboutContent() {
@@ -41,9 +55,9 @@ export default function AboutContent() {
           {skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-lg border border-border bg-card-bg px-4 py-2 text-sm font-medium text-text"
+              className="rounded-lg border border-border bg-card-bg px-4 py-2 text-sm font-medium text-text transition-transform duration-200 hover:scale-110 cursor-default"
             >
-              {skill}
+              {skill === "English" ? t.projects.english : skill}
             </span>
           ))}
         </div>

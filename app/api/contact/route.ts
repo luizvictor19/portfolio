@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 interface ContactBody {
   name?: string;
@@ -11,6 +12,8 @@ interface FieldErrors {
   email?: string;
   message?: string;
 }
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   let body: ContactBody;
@@ -38,12 +41,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ errors }, { status: 400 });
   }
 
-  // Placeholder — replace with email service integration
-  console.log("Contact form submission:", {
-    name: body.name,
-    email: body.email,
-    message: body.message,
+  const { error } = await resend.emails.send({
+    from: "onboarding@resend.dev",
+    to: "luizvictorred@gmail.com",
+    subject: `Contato através do Portfólio feito por ${body.name}`,
+    replyTo: body.email,
+    text: `Name: ${body.name}\nEmail: ${body.email}\n\n${body.message}`,
   });
+
+  if (error) {
+    return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
+  }
 
   return NextResponse.json({ success: true });
 }

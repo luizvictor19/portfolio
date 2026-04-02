@@ -1,7 +1,12 @@
+export interface LocalizedString {
+  pt: string;
+  en: string;
+}
+
 export interface Project {
   id: string;
-  title: string;
-  description: string;
+  title: LocalizedString;
+  description: LocalizedString;
   techStack: string[];
   image: string;
   link: string;
@@ -11,43 +16,48 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-Commerce Platform",
+    title: {
+      pt: "Quatro em Linha (Lig-4)",
+      en: "Connect Four Game (Lig-4)",
+    },
     slug: "ecommerce-platform",
-    description:
-      "A full-stack e-commerce application with product management, shopping cart, and Stripe payment integration. Built with a focus on performance and accessibility.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "PostgreSQL"],
-    image: "/images/ecommerce.jpg",
+    description: {
+      pt: "Clássico jogo Lig-4 interativo, onde dois jogadores se alternam para encaixar quatro peças consecutivas na vertical, horizontal ou diagonal. Possui temática dos Guardiões da Galáxia e conta com detecção automática de vitória ou empate.",
+      en: "Classic interactive Connect Four game where two players take turns dropping pieces to align four in a row — vertically, horizontally, or diagonally. Features a Guardians of the Galaxy theme and automatic win/draw detection.",
+    },
+    techStack: ["HTML", "CSS", "Javascript"],
+    image: "/images/lig-4.png",
     link: "https://github.com/example/ecommerce",
   },
   {
     id: "2",
-    title: "Task Management App",
-    slug: "task-management-app",
-    description:
-      "A collaborative task management tool with real-time updates, drag-and-drop boards, and team workspaces. Inspired by Trello and Linear.",
-    techStack: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-    image: "/images/taskmanager.jpg",
-    link: "https://github.com/example/taskmanager",
+    title: {
+      pt: "Desafio das Jarras d'Água",
+      en: "Water Jug Challenge",
+    },
+    slug: "water-jug-challenge",
+    description: {
+      pt: "Um solucionador interativo do clássico problema dos jarros d'água (popularizado por Duro de Matar 3). O usuário define as capacidades dos jarros e o volume alvo, e o sistema encontra a sequência de passos mais curta usando BFS (busca em largura).",
+      en: "An interactive solver for the classic water jug problem (popularized by Die Hard with a Vengeance). The user sets the jug capacities and target volume, and the system finds the shortest sequence of steps using BFS (breadth-first search).",
+    },
+    techStack: ["HTML", "CSS", "React", "Typescript", "Styled Components"],
+    image: "/images/water-jug-challenge.png",
+    link: "https://water-jug-challenge.vercel.app/",
   },
   {
     id: "3",
-    title: "Weather Dashboard",
+    title: {
+      pt: "Loja Yumi",
+      en: "Yumi Store",
+    },
     slug: "weather-dashboard",
-    description:
-      "A weather dashboard that displays current conditions, forecasts, and interactive maps. Uses geolocation and multiple weather APIs.",
-    techStack: ["Next.js", "TypeScript", "Chart.js", "OpenWeather API"],
-    image: "/images/weather.jpg",
-    link: "https://github.com/example/weather",
-  },
-  {
-    id: "4",
-    title: "Blog Engine",
-    slug: "blog-engine",
-    description:
-      "A markdown-powered blog engine with syntax highlighting, RSS feed, and full-text search. Statically generated for fast load times.",
-    techStack: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-    image: "/images/blog.jpg",
-    link: "https://github.com/example/blog",
+    description: {
+      pt: "E-commerce de produtos para animais de estimação inspirado no Petz, com catálogo de produtos, carrinho de compras, barra de pesquisa, cadastro, login, seção de favoritos e finalização de pedido. Interface amigável e responsiva.",
+      en: "A pet supply e-commerce inspired by Petz, featuring a product catalogue, shopping cart, search bar, user registration, login, favourites section, and checkout. Friendly and responsive interface.",
+    },
+    techStack: ["HTML", "CSS", "Typescript", "Styled Components", "Context API", "Node.js", "Express.js"],
+    image: "/images/yumi-store-updated.png",
+    link: "https://yumi-store.vercel.app/",
   },
 ];
 

@@ -7,7 +7,7 @@ import { getFeaturedProjects } from "@/data/projects";
 import { useLanguage } from "@/components/language-provider";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const featured = getFeaturedProjects(3);
 
   return (
@@ -25,6 +25,13 @@ export default function Home() {
           <Button href="/projects">{t.home.viewProjects}</Button>
           <Button href="/contact" variant="outline">
             {t.home.getInTouch}
+          </Button>
+          <Button
+            href={language === "pt" ? "/cv/CV-Luiz-Oliveira.pdf" : "/cv/CV-Luiz-Oliveira-English.pdf"}
+            variant="outline"
+            download
+          >
+            {t.home.downloadCV}
           </Button>
         </div>
       </section>

@@ -133,7 +133,7 @@ export default function ContactForm() {
         )}
       </div>
 
-      <Button type="submit" disabled={status === "submitting"}>
+      <Button type="submit" disabled={status === "submitting"} className="self-start">
         {status === "submitting" ? t.contact.sending : t.contact.send}
       </Button>
     </form>
