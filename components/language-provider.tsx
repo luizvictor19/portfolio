@@ -7,6 +7,7 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import { useRouter } from "next/navigation";
 import { translations, type Language, type Translations } from "@/data/translations";
 
 interface LanguageContextValue {
@@ -19,6 +20,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("pt");
+  const router = useRouter();
 
   useEffect(() => {
     const stored = localStorage.getItem("language") as Language | null;
@@ -30,6 +32,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguage(next);
     localStorage.setItem("language", next);
     document.cookie = `language=${next};path=/;max-age=31536000`;
+    router.refresh();
   }
 
   return (
