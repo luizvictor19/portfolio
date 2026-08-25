@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/components/language-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnimatedBackground from "@/components/animated-background";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        <Analytics />
         <LanguageProvider>
           <ThemeProvider initialTheme={theme}>
             <AnimatedBackground />
