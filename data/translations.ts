@@ -11,7 +11,7 @@ export const translations = {
     },
     home: {
       greeting: "Olá, meu nome é",
-      bio: "Sou desenvolvedor full stack e engenheiro de IA aplicada. Construo aplicações web e mobile e sistemas de IA em produção, com foco em confiabilidade verificável.",
+      bio: "Sou desenvolvedor full stack e engenheiro de IA aplicada. Construo sistemas em produção com foco em confiabilidade verificável.",
       viewProjects: "Ver Projetos",
       getInTouch: "Entrar em Contato",
       featuredProjects: "Alguns dos meus projetos",
@@ -25,9 +25,9 @@ export const translations = {
     },
     about: {
       title: "Sobre Mim",
-      bio1: "Sou desenvolvedor full stack e engenheiro de IA aplicada. Construo aplicações web e mobile e sistemas de IA em produção, e gosto de transformar problema complexo em solução simples e verificável.",
-      bio2: "São 5 anos de experiência, sendo 4 construindo produtos para clientes corporativos numa plataforma de conectividade M2M, do front ao deploy, em arquitetura de microfrontends. Me importo com qualidade de código, com decisão tomada em cima de número medido e não de opinião, e com aprendizado contínuo.",
-      bio3: "Nas horas vagas você me encontra construindo projetos próprios, lendo sobre IA aplicada, ou testando hipóteses que quase sempre fecham negativas.",
+      bio1: "Sou desenvolvedor full stack e engenheiro de IA aplicada. Construo aplicações web e mobile, APIs e sistemas de IA em produção, gosto de transformar problemas complexos em soluções simples e verificáveis.",
+      bio2: "Passei quatro dos meus cinco anos de carreira numa plataforma de conectividade M2M, onde queda de conexão significa operação parada para o cliente. Mantive quatro produtos em paralelo e o servidor por trás deles, da tela ao deploy.",
+      bio3: "Nas horas vagas você vai me encontrar lendo sobre IA, novas tecnologias, e construindo projetos próprios. O mais recente é um sistema de IA em produção, aberto no GitHub, com o método e os números documentados.",
       skillsTitle: "Habilidades & Tecnologias",
       skillsSubtitle: "Tecnologias, práticas e ferramentas que uso no dia a dia",
     },
@@ -73,7 +73,7 @@ export const translations = {
     },
     home: {
       greeting: "Hi, my name is",
-      bio: "I'm a full stack developer and applied AI engineer. I build web and mobile applications and AI systems in production, with a focus on verifiable reliability.",
+      bio: "I'm a full stack developer and applied AI engineer. I build systems in production with a focus on verifiable reliability.",
       viewProjects: "View Projects",
       getInTouch: "Get in Touch",
       featuredProjects: "Some of my projects",
@@ -87,9 +87,9 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      bio1: "I'm a full stack developer and applied AI engineer. I build web and mobile applications and AI systems in production, and I enjoy turning complex problems into simple solutions you can verify.",
-      bio2: "Five years of experience, four of them building products for enterprise clients on an M2M connectivity platform, front end through deploy, on a microfrontend architecture. I care about code quality, about decisions made on measured numbers rather than opinion, and about continuous learning.",
-      bio3: "In my free time you'll find me building my own projects, reading about applied AI, or testing hypotheses that usually close negative.",
+      bio1: "I'm a full stack developer and applied AI engineer. I build web and mobile applications, APIs and AI systems in production, and I enjoy turning complex problems into simple solutions you can verify.",
+      bio2: "I spent four of my five years in the industry on an M2M connectivity platform, where a dropped connection means the client's operation stops. I maintained four products in parallel and the server behind them, from the screen to the deploy.",
+      bio3: "In my free time you'll find me reading about AI and new technologies, and building my own projects. The most recent is an AI system running in production, open on GitHub, with the method and the numbers documented.",
       skillsTitle: "Skills & Technologies",
       skillsSubtitle: "Technologies, practices and tools I use day to day",
     },

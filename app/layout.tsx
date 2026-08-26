@@ -50,10 +50,11 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const theme = (cookieStore.get("theme")?.value ?? "dark") as "light" | "dark";
+  const lang = cookieStore.get("language")?.value ?? "pt";
 
   return (
     <html
-      lang="en"
+      lang={lang}
       data-theme={theme}
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
