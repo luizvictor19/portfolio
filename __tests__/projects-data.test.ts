@@ -13,9 +13,10 @@ describe("projects data", () => {
   });
 
   it("getProjectBySlug returns the correct project", () => {
-    const project = getProjectBySlug("ecommerce-platform");
+    const project = getProjectBySlug("lig-4");
     expect(project).toBeDefined();
-    expect(project!.title).toBe("E-Commerce Platform");
+    expect(project!.title.pt).toBe("Quatro em Linha (Lig-4)");
+    expect(project!.title.en).toBe("Connect Four Game (Lig-4)");
   });
 
   it("getProjectBySlug returns undefined for invalid slug", () => {

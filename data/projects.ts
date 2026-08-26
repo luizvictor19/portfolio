@@ -35,7 +35,7 @@ export const projects: Project[] = [
       pt: "Quatro em Linha (Lig-4)",
       en: "Connect Four Game (Lig-4)",
     },
-    slug: "ecommerce-platform",
+    slug: "lig-4",
     description: {
       pt: "Clássico jogo Lig-4 interativo, onde dois jogadores se alternam para encaixar quatro peças consecutivas na vertical, horizontal ou diagonal. Possui temática dos Guardiões da Galáxia e conta com detecção automática de vitória ou empate.",
       en: "Classic interactive Connect Four game where two players take turns dropping pieces to align four in a row — vertically, horizontally, or diagonally. Features a Guardians of the Galaxy theme and automatic win/draw detection.",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       pt: "Loja Yumi",
       en: "Yumi Store",
     },
-    slug: "weather-dashboard",
+    slug: "loja-yumi",
     description: {
       pt: "E-commerce de produtos para animais de estimação inspirado no Petz, com catálogo de produtos, carrinho de compras, barra de pesquisa, cadastro, login, seção de favoritos e finalização de pedido. Interface amigável e responsiva.",
       en: "A pet supply e-commerce inspired by Petz, featuring a product catalogue, shopping cart, search bar, user registration, login, favourites section, and checkout. Friendly and responsive interface.",
