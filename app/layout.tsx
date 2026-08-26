@@ -25,8 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const siteName = lang === "en" ? "Portfolio" : "Portfólio";
   const description =
     lang === "en"
-      ? "Personal portfolio showcasing my projects and skills."
-      : "Portfólio pessoal com meus projetos e habilidades.";
+      ? "Portfolio of Luiz Oliveira, full stack developer and applied AI engineer."
+      : "Portfólio de Luiz Oliveira, desenvolvedor full stack e engenheiro de IA aplicada.";
 
   return {
     title: {

@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = cookieStore.get("language")?.value ?? "pt";
   const title = lang === "en" ? "About" : "Sobre";
   const siteName = lang === "en" ? "Portfolio" : "Portfólio";
-  const description = "Learn more about me, my background, and the technologies I work with.";
+  const description = "Five years building web, mobile and AI systems in production. Background, method and the technologies I work with.";
 
   return {
     title,

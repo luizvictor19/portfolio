@@ -11,7 +11,7 @@ export const translations = {
     },
     home: {
       greeting: "Olá, meu nome é",
-      bio: "Sou um desenvolvedor front-end que constrói aplicações web e mobile modernas com foco em performance, acessibilidade e código limpo.",
+      bio: "Sou desenvolvedor full stack e engenheiro de IA aplicada. Construo aplicações web e mobile e sistemas de IA em produção, com foco em confiabilidade verificável.",
       viewProjects: "Ver Projetos",
       getInTouch: "Entrar em Contato",
       featuredProjects: "Alguns dos meus projetos",
@@ -25,11 +25,11 @@ export const translations = {
     },
     about: {
       title: "Sobre Mim",
-      bio1: "Sou um desenvolvedor front-end apaixonado por criar aplicações web e mobile que são rápidas, acessíveis e agradáveis de usar. Gosto de transformar problemas complexos em soluções simples e elegantes.",
-      bio2: "Com mais de 5 anos de experiência em desenvolvimento frontend, trabalhei em projetos que vão desde simples interfaces até grandes e escaláveis plataformas SaaS. Me importo profundamente com qualidade de código, experiência do usuário e aprendizado contínuo.",
-      bio3: "Nas horas vagas, você me encontrará lendo sobre tecnologia, desenvolvendo projetos pessoais ou explorando novas ferramentas e frameworks.",
+      bio1: "Sou desenvolvedor full stack e engenheiro de IA aplicada. Construo aplicações web e mobile e sistemas de IA em produção, e gosto de transformar problema complexo em solução simples e verificável.",
+      bio2: "São 5 anos de experiência, sendo 4 construindo produtos para clientes corporativos numa plataforma de conectividade M2M, do front ao deploy, em arquitetura de microfrontends. Me importo com qualidade de código, com decisão tomada em cima de número medido e não de opinião, e com aprendizado contínuo.",
+      bio3: "Nas horas vagas você me encontra construindo projetos próprios, lendo sobre IA aplicada, ou testando hipóteses que quase sempre fecham negativas.",
       skillsTitle: "Habilidades & Tecnologias",
-      skillsSubtitle: "Ferramentas com as quais trabalho regularmente",
+      skillsSubtitle: "Tecnologias, práticas e ferramentas que uso no dia a dia",
     },
     projects: {
       title: "Projetos",
@@ -73,7 +73,7 @@ export const translations = {
     },
     home: {
       greeting: "Hi, my name is",
-      bio: "I'm a front-end developer who builds modern web and mobile applications with a focus on performance, accessibility, and clean code.",
+      bio: "I'm a full stack developer and applied AI engineer. I build web and mobile applications and AI systems in production, with a focus on verifiable reliability.",
       viewProjects: "View Projects",
       getInTouch: "Get in Touch",
       featuredProjects: "Some of my projects",
@@ -81,17 +81,17 @@ export const translations = {
       viewAllProjects: "View All Projects",
       aboutMe: "About Me",
       aboutSnippet:
-        "I'm passionate about building softwares that solves real problems. With experience across all layers of development, I enjoy working on everything from system design to pixel-perfect UIs.",
+        "I'm passionate about building software that solves real problems. With experience across all layers of development, I enjoy working on everything from system design to pixel-perfect UIs.",
       readMore: "Read More",
       downloadCV: "Download CV",
     },
     about: {
       title: "About Me",
-      bio1: "I'm a front-end developer with a passion for building web and mobile applications that are fast, accessible, and delightful to use. I enjoy turning complex problems into simple, elegant solutions.",
-      bio2: "With several years of experience across both frontend and backend development, I've worked on projects ranging from small business sites to large-scale SaaS platforms. I care deeply about code quality, user experience, and continuous learning.",
-      bio3: "In my free time, you'll find me reading about technology, working on personal projects, or exploring new tools and frameworks.",
+      bio1: "I'm a full stack developer and applied AI engineer. I build web and mobile applications and AI systems in production, and I enjoy turning complex problems into simple solutions you can verify.",
+      bio2: "Five years of experience, four of them building products for enterprise clients on an M2M connectivity platform, front end through deploy, on a microfrontend architecture. I care about code quality, about decisions made on measured numbers rather than opinion, and about continuous learning.",
+      bio3: "In my free time you'll find me building my own projects, reading about applied AI, or testing hypotheses that usually close negative.",
       skillsTitle: "Skills & Technologies",
-      skillsSubtitle: "Tools I work with regularly",
+      skillsSubtitle: "Technologies, practices and tools I use day to day",
     },
     projects: {
       title: "Projects",

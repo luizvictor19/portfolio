@@ -15,6 +15,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "prediction-radar",
+    title: {
+      pt: "Prediction Radar",
+      en: "Prediction Radar",
+    },
+    slug: "prediction-radar",
+    description: {
+      pt: "Sistema em produção que usa LLM para digerir o regulamento de resolução de mercados de previsão e apontar contradições entre a manchete pela qual o mercado é precificado e a regra pela qual ele de fato resolve. Cada achado aponta o trecho literal de origem. Já acompanhou 1.206 mercados sobre 267 textos de regra distintos.",
+      en: "A production system that uses LLMs to digest the resolution rules of prediction markets and flag contradictions between the headline a market is priced on and the rule it actually settles by. Every finding points to the literal span it came from. It has tracked 1,206 markets across 267 distinct rule texts.",
+    },
+    techStack: ["TypeScript", "Node.js", "React", "PostgreSQL", "Supabase", "LLM"],
+    image: "/images/prediction-radar.png",
+    link: "https://github.com/luizvictor19/prediction-radar",
+  },
+  {
     id: "1",
     title: {
       pt: "Quatro em Linha (Lig-4)",
