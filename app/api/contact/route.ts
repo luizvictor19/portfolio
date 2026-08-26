@@ -13,7 +13,14 @@ interface FieldErrors {
   message?: string;
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let client: Resend | null = null;
+
+function getResend(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return null;
+  if (!client) client = new Resend(apiKey);
+  return client;
+}
 
 export async function POST(request: Request) {
   let body: ContactBody;
@@ -39,6 +46,15 @@ export async function POST(request: Request) {
 
   if (Object.keys(errors).length > 0) {
     return NextResponse.json({ errors }, { status: 400 });
+  }
+
+  const resend = getResend();
+
+  if (!resend) {
+    return NextResponse.json(
+      { error: "Email service is not configured. Missing RESEND_API_KEY." },
+      { status: 500 }
+    );
   }
 
   const { error } = await resend.emails.send({
