@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { CONTACT_LIMITS as LIMITS } from "@/data/limits";
 
 interface ContactBody {
   name?: string;
@@ -37,12 +38,16 @@ export async function POST(request: Request) {
   const errors: FieldErrors = {};
 
   if (!body.name?.trim()) errors.name = "Name is required.";
+  else if (body.name.length > LIMITS.name) errors.name = `Name must be at most ${LIMITS.name} characters.`;
+
   if (!body.email?.trim()) {
     errors.email = "Email is required.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.email)) {
+  } else if (body.email.length > LIMITS.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.email)) {
     errors.email = "Please enter a valid email address.";
   }
+
   if (!body.message?.trim()) errors.message = "Message is required.";
+  else if (body.message.length > LIMITS.message) errors.message = `Message must be at most ${LIMITS.message} characters.`;
 
   if (Object.keys(errors).length > 0) {
     return NextResponse.json({ errors }, { status: 400 });
@@ -58,7 +63,7 @@ export async function POST(request: Request) {
   }
 
   const { error } = await resend.emails.send({
-    from: "onboarding@resend.dev",
+    from: "Portfólio <contato@luizoliveira.dev>",
     to: "luizvictorred@gmail.com",
     subject: `Contato através do Portfólio feito por ${body.name}`,
     replyTo: body.email,

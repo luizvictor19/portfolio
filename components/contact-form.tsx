@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Button from "./button";
 import { useLanguage } from "./language-provider";
+import { CONTACT_LIMITS } from "@/data/limits";
 
 interface FormErrors {
   name?: string;
@@ -23,12 +24,16 @@ export default function ContactForm() {
   function validate(n: string, e: string, m: string): FormErrors {
     const errs: FormErrors = {};
     if (!n.trim()) errs.name = t.contact.nameRequired;
+    else if (n.length > CONTACT_LIMITS.name) errs.name = t.contact.nameTooLong;
+
     if (!e.trim()) {
       errs.email = t.contact.emailRequired;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) {
+    } else if (e.length > CONTACT_LIMITS.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) {
       errs.email = t.contact.emailInvalid;
     }
+
     if (!m.trim()) errs.message = t.contact.messageRequired;
+    else if (m.length > CONTACT_LIMITS.message) errs.message = t.contact.messageTooLong;
     return errs;
   }
 
@@ -90,6 +95,7 @@ export default function ContactForm() {
           id="name"
           type="text"
           value={name}
+          maxLength={CONTACT_LIMITS.name}
           onChange={(e) => setName(e.target.value)}
           className="rounded-lg border border-border bg-bg px-3 py-2 text-text placeholder:text-text-secondary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder={t.contact.namePlaceholder}
@@ -107,6 +113,7 @@ export default function ContactForm() {
           id="email"
           type="email"
           value={email}
+          maxLength={CONTACT_LIMITS.email}
           onChange={(e) => setEmail(e.target.value)}
           className="rounded-lg border border-border bg-bg px-3 py-2 text-text placeholder:text-text-secondary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder={t.contact.emailPlaceholder}
@@ -124,6 +131,7 @@ export default function ContactForm() {
           id="message"
           rows={5}
           value={message}
+          maxLength={CONTACT_LIMITS.message}
           onChange={(e) => setMessage(e.target.value)}
           className="rounded-lg border border-border bg-bg px-3 py-2 text-text placeholder:text-text-secondary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           placeholder={t.contact.messagePlaceholder}

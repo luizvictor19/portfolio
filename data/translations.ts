@@ -57,6 +57,8 @@ export const translations = {
       emailRequired: "E-mail é obrigatório.",
       emailInvalid: "Por favor, insira um endereço de e-mail válido.",
       messageRequired: "Mensagem é obrigatória.",
+      nameTooLong: "Nome deve ter no máximo 100 caracteres.",
+      messageTooLong: "Mensagem deve ter no máximo 5000 caracteres.",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -118,6 +120,8 @@ export const translations = {
       emailRequired: "Email is required.",
       emailInvalid: "Please enter a valid email address.",
       messageRequired: "Message is required.",
+      nameTooLong: "Name must be at most 100 characters.",
+      messageTooLong: "Message must be at most 5000 characters.",
     },
     footer: {
       rights: "All rights reserved",
